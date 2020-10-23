@@ -1,0 +1,20 @@
+{
+  "name": "root",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  },
+  "dependencies": {
+    "typescript": "^4.0.3"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "lerna exec yarn start",
+    "test": "lerna run test --parallel",
+    "bootstrap": "lerna bootstrap --use-workspaces",
+    "release": "yarn install && lerna publish && yarn clean"
+  }
+}
