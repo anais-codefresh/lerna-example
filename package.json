@@ -14,7 +14,7 @@
   "scripts": {
     "start": "lerna exec yarn start",
     "test": "lerna run test --parallel",
-    "boot": "lerna bootstrap",
+    "boot": "yarn global add lerna && lerna bootstrap",
     "release": "yarn install && lerna publish && yarn clean"
   }
 }
